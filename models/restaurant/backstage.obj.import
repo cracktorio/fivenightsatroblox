@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://nkm00ecwwi1u"
+path="res://.godot/imported/backstage.obj-53f1ca58c6d99e8ed7da86a7c565de0e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/backstage.obj-53f1ca58c6d99e8ed7da86a7c565de0e.mesh"]
+
+source_file="res://models/restaurant/backstage.obj"
+dest_files=["res://.godot/imported/backstage.obj-53f1ca58c6d99e8ed7da86a7c565de0e.mesh", "res://.godot/imported/backstage.obj-53f1ca58c6d99e8ed7da86a7c565de0e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

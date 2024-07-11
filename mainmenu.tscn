@@ -1,0 +1,124 @@
+[gd_scene load_steps=10 format=3 uid="uid://b7glpda145gja"]
+
+[ext_resource type="Texture2D" uid="uid://dqd0js8t1ugpe" path="res://textures/robloxian/Robloxian.webp" id="1_q1j22"]
+[ext_resource type="Script" path="res://scripts/mainmenu/robloxian.gd" id="2_8yjwh"]
+[ext_resource type="Shader" path="res://shaders/vhs.gdshader" id="2_hvx5i"]
+[ext_resource type="Script" path="res://scripts/mainmenu/continue.gd" id="2_rwf37"]
+[ext_resource type="Script" path="res://scripts/mainmenu/newgame.gd" id="3_iw76h"]
+[ext_resource type="AudioStream" uid="uid://gke53cgid0rd" path="res://audio/ROBLOX Music Horror.mp3" id="5_lr6br"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0ai3p"]
+shader = ExtResource("2_hvx5i")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.1
+shader_parameter/grille_opacity = 0.415
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = true
+shader_parameter/roll = true
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 18.794
+shader_parameter/roll_variation = 0.655
+shader_parameter/distort_intensity = 0.043
+shader_parameter/noise_opacity = 0.67
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.16
+shader_parameter/aberration = 0.01
+shader_parameter/brightness = 1.0
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.19
+shader_parameter/vignette_opacity = 0.595
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cnkny"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4hewk"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="roblox char" type="TextureRect" parent="."]
+offset_left = 1000.0
+offset_top = 232.0
+offset_right = 2112.0
+offset_bottom = 1692.0
+texture = ExtResource("1_q1j22")
+expand_mode = 5
+stretch_mode = 4
+script = ExtResource("2_8yjwh")
+
+[node name="game title" type="RichTextLabel" parent="."]
+offset_left = 150.0
+offset_top = 51.0
+offset_right = 1920.0
+offset_bottom = 205.0
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "Five Nights at Roblox"
+
+[node name="TextButtonNewGame" type="Button" parent="."]
+offset_left = 82.0
+offset_top = 875.0
+offset_right = 689.0
+offset_bottom = 1020.0
+theme_override_font_sizes/font_size = 100
+text = "New Game"
+flat = true
+
+[node name="TextButtonContinue" type="Button" parent="."]
+offset_left = 92.0
+offset_top = 696.0
+offset_right = 575.0
+offset_bottom = 841.0
+theme_override_font_sizes/font_size = 100
+text = "Continue"
+flat = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="vhs shader" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_0ai3p")
+anchors_preset = -1
+anchor_right = 0.996
+anchor_bottom = 1.0
+offset_right = 7.67993
+color = Color(1, 1, 1, 0)
+
+[node name="ActualButtonNewGame" type="Button" parent="CanvasLayer"]
+offset_left = 117.0
+offset_top = 878.0
+offset_right = 654.0
+offset_bottom = 1023.0
+theme_override_font_sizes/font_size = 100
+theme_override_styles/hover = SubResource("StyleBoxEmpty_cnkny")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4hewk")
+action_mode = 0
+flat = true
+script = ExtResource("3_iw76h")
+
+[node name="ActualButtonContinue" type="Button" parent="CanvasLayer"]
+offset_left = 91.0
+offset_top = 696.0
+offset_right = 574.0
+offset_bottom = 841.0
+theme_override_font_sizes/font_size = 100
+theme_override_styles/hover = SubResource("StyleBoxEmpty_cnkny")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4hewk")
+action_mode = 0
+flat = true
+script = ExtResource("2_rwf37")
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_lr6br")
+autoplay = true
+
+[node name="timera" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="timera" to="roblox char" method="_on_timera_timeout"]

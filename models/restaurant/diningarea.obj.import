@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://rkhrapgtt4cv"
+path="res://.godot/imported/diningarea.obj-fc4e5a21668c00e997ae8d3e489dfed0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/diningarea.obj-fc4e5a21668c00e997ae8d3e489dfed0.mesh"]
+
+source_file="res://models/restaurant/diningarea.obj"
+dest_files=["res://.godot/imported/diningarea.obj-fc4e5a21668c00e997ae8d3e489dfed0.mesh", "res://.godot/imported/diningarea.obj-fc4e5a21668c00e997ae8d3e489dfed0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

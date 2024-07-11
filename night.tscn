@@ -1,0 +1,1040 @@
+[gd_scene load_steps=125 format=3 uid="uid://cfe4co4bwj0m3"]
+
+[ext_resource type="ArrayMesh" uid="uid://rkhrapgtt4cv" path="res://models/restaurant/diningarea.obj" id="1_bs5qf"]
+[ext_resource type="Shader" path="res://shaders/vhs.gdshader" id="2_jqsf5"]
+[ext_resource type="Texture2D" uid="uid://irmv1oavnqy" path="res://textures/fnafwall.png" id="2_pd7yv"]
+[ext_resource type="Script" path="res://scripts/night/rotatingcamera.gd" id="2_vqo8i"]
+[ext_resource type="ArrayMesh" uid="uid://on76pbkvqbad" path="res://models/restaurant/hallwayleft.obj" id="3_3cr12"]
+[ext_resource type="ArrayMesh" uid="uid://cr2b2qqkfe2dm" path="res://models/restaurant/restroom.obj" id="3_k81r8"]
+[ext_resource type="Environment" uid="uid://c2aeeyhwksoh5" path="res://textures/envblack.tres" id="3_syiq6"]
+[ext_resource type="ArrayMesh" uid="uid://c6r2uxp6eeygb" path="res://models/restaurant/hallwayright.obj" id="3_yrepm"]
+[ext_resource type="Texture2D" uid="uid://e7vthtmeyeu4" path="res://textures/fnafmap.png" id="4_w2rqc"]
+[ext_resource type="ArrayMesh" uid="uid://nkm00ecwwi1u" path="res://models/restaurant/backstage.obj" id="5_hv8kr"]
+[ext_resource type="Script" path="res://scripts/night/lightactivetoggleSPOT.gd" id="5_sv51e"]
+[ext_resource type="ArrayMesh" uid="uid://3y1wrjga575s" path="res://models/restaurant/office.obj" id="5_ug5lx"]
+[ext_resource type="ArrayMesh" uid="uid://dnuoabhin6r3t" path="res://models/restaurant/supplycloset.obj" id="7_05lp8"]
+[ext_resource type="Script" path="res://scripts/night/lightactivetoggleOMNI.gd" id="7_w8lcp"]
+[ext_resource type="ArrayMesh" uid="uid://mavk36moetxf" path="res://models/restaurant/piratecove.obj" id="8_gyjse"]
+[ext_resource type="Script" path="res://scripts/night/hallwaylamp.gd" id="9_0i2tj"]
+[ext_resource type="ArrayMesh" uid="uid://buxgsa5lfepgi" path="res://models/restaurant/piratecovecurtain.obj" id="9_yfo32"]
+[ext_resource type="Texture2D" uid="uid://dqd0js8t1ugpe" path="res://textures/robloxian/Robloxian.webp" id="11_jrud3"]
+[ext_resource type="Script" path="res://scripts/night/flicker_light.gd" id="13_mv2pp"]
+[ext_resource type="Script" path="res://scripts/night/cam6.gd" id="15_l27qn"]
+[ext_resource type="Texture2D" uid="uid://bads7y85llh2q" path="res://textures/icon.svg" id="15_pmb1m"]
+[ext_resource type="Texture2D" uid="uid://bccstkmedfill" path="res://textures/robloxian/Robloxian_sad.webp" id="15_rjmau"]
+[ext_resource type="ArrayMesh" uid="uid://bquhi700w45ge" path="res://models/baconhairstationary.obj" id="16_6iupt"]
+[ext_resource type="Material" uid="uid://dladdj4jkwt3q" path="res://shaders/spatial/noise.material" id="16_ewy1m"]
+[ext_resource type="Script" path="res://scripts/night/mapbutton.gd" id="17_mja26"]
+[ext_resource type="StyleBox" uid="uid://0qv7apy1xje1" path="res://textures/buttonselect.tres" id="17_ppxyb"]
+[ext_resource type="ArrayMesh" uid="uid://tqbelc8mcmus" path="res://models/monitor.obj" id="17_py6au"]
+[ext_resource type="Texture2D" uid="uid://daro78dyf5ipn" path="res://models/roblox-bacon-hair_0.png" id="17_q3wq7"]
+[ext_resource type="Script" path="res://scripts/night/camself.gd" id="17_r1ps6"]
+[ext_resource type="Material" uid="uid://dq8q13bd0sgun" path="res://textures/glass.tres" id="19_iv7co"]
+[ext_resource type="Texture2D" uid="uid://ch03hic4kgt17" path="res://textures/monitortoggle.png" id="21_x158s"]
+[ext_resource type="Material" uid="uid://dw3nsn5gj1all" path="res://textures/black.tres" id="22_bwbmy"]
+[ext_resource type="AudioStream" uid="uid://e024nbuu6kd2" path="res://audio/sfx/fan.mp3" id="23_2pbpd"]
+[ext_resource type="Script" path="res://scripts/night/officedoor.gd" id="23_jep6e"]
+[ext_resource type="Script" path="res://scripts/night/fan.gd" id="24_fag6w"]
+[ext_resource type="Script" path="res://scripts/night/foxy.gd" id="24_q03jp"]
+[ext_resource type="ArrayMesh" uid="uid://b2dhuldatwy32" path="res://models/baconhairrun.obj" id="26_7rah1"]
+[ext_resource type="Script" path="res://scripts/night/monitorcontrol.gd" id="26_8e0sh"]
+[ext_resource type="AudioStream" uid="uid://bia4s77gogrwr" path="res://audio/sfx/door-closing.mp3" id="26_wfo4l"]
+[ext_resource type="Script" path="res://scripts/night/monitoranimation.gd" id="27_hw3dn"]
+[ext_resource type="Animation" uid="uid://fckbpp81w8hc" path="res://animations/monitor.anim" id="27_qsqry"]
+[ext_resource type="AudioStream" uid="uid://b6t4at862klea" path="res://audio/sfx/subspace-tripmine.wav" id="28_14rqe"]
+[ext_resource type="AudioStream" uid="uid://cuthd3e4uh145" path="res://audio/sfx/running.mp3" id="30_wt3yy"]
+[ext_resource type="AudioStream" uid="uid://b5tcx4fytvgg8" path="res://audio/sfx/quirky-at-night.mp3" id="32_8uwsh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gacj4"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r8g3x"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b2cxa"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7jwx7"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1j0cn"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l5fgm"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhtsv"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kcf25"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xibhb"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yo4s7"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8yt5a"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k658g"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6la4a"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pnki2"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ymyqg"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e27y6"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_orhe3"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6x1do"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b5up8"]
+albedo_color = Color(0.47451, 0, 0.686275, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_br5wg"]
+albedo_color = Color(0.47451, 0, 0.686275, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fwcu3"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6cfii"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ii7gi"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o4w1w"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cvxt5"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0im2"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gywe7"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v7ffx"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e54hy"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ynxh4"]
+albedo_texture = ExtResource("2_pd7yv")
+ao_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8pnd4"]
+albedo_texture = ExtResource("11_jrud3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkj0f"]
+albedo_texture = ExtResource("2_pd7yv")
+ao_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_worvn"]
+albedo_texture = ExtResource("15_pmb1m")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5mlmr"]
+albedo_texture = ExtResource("15_rjmau")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_du4bj"]
+albedo_texture = ExtResource("15_pmb1m")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5hq6q"]
+albedo_texture = ExtResource("15_pmb1m")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i5kon"]
+albedo_texture = ExtResource("15_rjmau")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7d8ft"]
+albedo_color = Color(0.278431, 0.207843, 0, 1)
+ao_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bqchi"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 0.4
+metallic_specular = 1.0
+roughness = 0.65
+ao_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fmspv"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ws3gq"]
+albedo_texture = ExtResource("2_pd7yv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sq31x"]
+albedo_texture_force_srgb = true
+metallic = 1.0
+roughness = 0.06
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lcctw"]
+size = Vector3(0.221741, 0.221436, 0.0583496)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qijd6"]
+size = Vector3(1.5, 4, 0.3)
+
+[sub_resource type="Animation" id="Animation_fuvvg"]
+resource_name = "door_close_left"
+length = 0.7
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 20.153, 6.044, 3.32, 0.7, 1, 20.153, 2.281, 3.32)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sound_door_close")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, -3.97293, 0, 0.7, 1, 0, -0.2, 0)
+
+[sub_resource type="Animation" id="Animation_4omkp"]
+resource_name = "door_close"
+length = 0.7
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 20.153, 6.044, -1.95, 0.7, 1, 20.153, 2.281, -1.95)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sound_door_close")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, -3.97293, 0, 0.7, 1, 0, -0.2, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dlqw0"]
+_data = {
+"doorleft_close": SubResource("Animation_fuvvg"),
+"doorright_close": SubResource("Animation_4omkp")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s3sam"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ww7vy"]
+material = SubResource("StandardMaterial3D_s3sam")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cpg5j"]
+albedo_texture = ExtResource("17_q3wq7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4pjyl"]
+albedo_texture = ExtResource("17_q3wq7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x46mm"]
+transparency = 1
+albedo_color = Color(0.113725, 0.113725, 0.113725, 0.580392)
+albedo_texture = ExtResource("17_q3wq7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cc3am"]
+albedo_texture = ExtResource("17_q3wq7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xq875"]
+transparency = 1
+albedo_color = Color(0.254902, 0.254902, 0.254902, 0.682353)
+albedo_texture = ExtResource("17_q3wq7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nnu58"]
+albedo_texture = ExtResource("17_q3wq7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4kb5v"]
+albedo_texture = ExtResource("17_q3wq7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b8rqh"]
+albedo_texture = ExtResource("17_q3wq7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0kx3v"]
+albedo_texture = ExtResource("17_q3wq7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x1v42"]
+albedo_texture = ExtResource("17_q3wq7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_628n7"]
+albedo_texture = ExtResource("17_q3wq7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2gh4"]
+albedo_texture = ExtResource("17_q3wq7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxh8p"]
+albedo_texture = ExtResource("17_q3wq7")
+
+[sub_resource type="Animation" id="Animation_tmj2x"]
+resource_name = "foxy running animation"
+length = 3.0
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("foxy_jump")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 3.51737, 0.25766, 4.7651, 1.6, 1, 16.1009, 0.256136, 4.68169, 2.7, 1, 19.4699, 0.255089, 4.62434, 3, 1, 20.02, 0.255, 4.1)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("foxy_jump")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, -0.707, 0, 0.707, 2.6, 1, 0, -0.707, 0, 0.707, 3, 1, 0, -0.383, 0, 0.924)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7j0dg"]
+_data = {
+"foxy running": SubResource("Animation_tmj2x")
+}
+
+[sub_resource type="Animation" id="Animation_ef6oa"]
+resource_name = "foxy jumpscare"
+length = 2.0
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("foxy_jump")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 19.544, 0.255, 4.1, 0.4, 1, 21.528, 0.06, 0.783)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("foxy_jump")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, -0.383, 0, 0.924, 0.4, 1, 0, -0.676, 0, 0.737)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pakt3"]
+_data = {
+"foxy jumpscare": SubResource("Animation_ef6oa")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ox47n"]
+shader = ExtResource("2_jqsf5")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.345
+shader_parameter/scanlines_width = 0.16
+shader_parameter/grille_opacity = 0.389
+shader_parameter/resolution = Vector2(480, 360)
+shader_parameter/pixelate = true
+shader_parameter/roll = true
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 15.0
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.073
+shader_parameter/noise_opacity = 0.19
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.08
+shader_parameter/aberration = 0.00900005
+shader_parameter/brightness = 1.0
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.325
+shader_parameter/vignette_opacity = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fy4l"]
+size = Vector2(443, 1090)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s2gj7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_upj0j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xaiev"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1hm1q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2r1wv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ymllu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pmr7q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0pa5t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_elpe7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5lrdw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vwbgg"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_puqqh"]
+_data = {
+"monitor": ExtResource("27_qsqry")
+}
+
+[node name="Node3D" type="Node3D"]
+
+[node name="restaurant" type="Node3D" parent="."]
+
+[node name="dining area" type="MeshInstance3D" parent="restaurant"]
+gi_mode = 0
+mesh = ExtResource("1_bs5qf")
+skeleton = NodePath("../..")
+surface_material_override/1 = SubResource("StandardMaterial3D_gacj4")
+surface_material_override/9 = SubResource("StandardMaterial3D_r8g3x")
+surface_material_override/10 = SubResource("StandardMaterial3D_b2cxa")
+surface_material_override/11 = SubResource("StandardMaterial3D_7jwx7")
+surface_material_override/12 = SubResource("StandardMaterial3D_1j0cn")
+surface_material_override/13 = SubResource("StandardMaterial3D_l5fgm")
+surface_material_override/14 = SubResource("StandardMaterial3D_bhtsv")
+surface_material_override/15 = SubResource("StandardMaterial3D_kcf25")
+surface_material_override/16 = SubResource("StandardMaterial3D_xibhb")
+surface_material_override/17 = SubResource("StandardMaterial3D_yo4s7")
+surface_material_override/18 = SubResource("StandardMaterial3D_8yt5a")
+
+[node name="Cam1A" type="Camera3D" parent="restaurant/dining area"]
+transform = Transform3D(0.866025, -0.177553, 0.467413, -7.71341e-09, 0.934826, 0.355107, -0.5, -0.307532, 0.809583, -11.2682, 4.15309, 4.20168)
+environment = ExtResource("3_syiq6")
+current = true
+fov = 71.2097
+
+[node name="spotlight" type="SpotLight3D" parent="restaurant/dining area/Cam1A"]
+transform = Transform3D(0.999995, 0.000136055, 0.00319561, -2.43187e-05, 0.999389, -0.0349438, -0.00319837, 0.0349436, 0.999384, 0.139543, 0.0836325, -0.174415)
+light_energy = 4.152
+light_indirect_energy = 0.0
+light_size = 1.0
+spot_range = 9.86853
+spot_angle = 28.6739
+script = ExtResource("5_sv51e")
+
+[node name="Cam1B" type="Camera3D" parent="restaurant/dining area"]
+transform = Transform3D(-0.100293, 0.353316, -0.930112, 1.97784e-08, 0.934826, 0.355107, 0.994958, 0.0356146, -0.0937562, -10.1409, 3.23224, 4.00434)
+environment = ExtResource("3_syiq6")
+current = true
+fov = 40.1464
+script = ExtResource("2_vqo8i")
+
+[node name="spotlight" type="SpotLight3D" parent="restaurant/dining area/Cam1B"]
+transform = Transform3D(0.999995, 0.000136048, 0.00319552, -2.43038e-05, 0.999389, -0.0349436, -0.00319839, 0.0349433, 0.999384, 0.0849705, 0.00620294, 0.0140486)
+light_energy = 1.99
+light_indirect_energy = 0.0
+light_size = 1.0
+shadow_enabled = true
+spot_range = 11.3539
+spot_angle = 19.0882
+script = ExtResource("5_sv51e")
+
+[node name="Cam1C" type="Camera3D" parent="restaurant/dining area"]
+transform = Transform3D(-0.993246, 0.041203, -0.108468, -7.71341e-09, 0.934826, 0.355106, 0.11603, 0.352708, -0.928512, -0.356294, 4.15309, 3.55368)
+environment = ExtResource("3_syiq6")
+current = true
+fov = 55.0914
+
+[node name="spotlight" type="SpotLight3D" parent="restaurant/dining area/Cam1C"]
+transform = Transform3D(0.999995, 0.000136055, 0.00319558, -2.43112e-05, 0.999389, -0.0349436, -0.00319837, 0.0349434, 0.999384, 0.0849695, 0.0113063, 0.0159855)
+light_energy = 1.59
+light_indirect_energy = 0.0
+light_size = 1.0
+spot_range = 7.45278
+spot_angle = 28.6739
+script = ExtResource("5_sv51e")
+
+[node name="light" type="SpotLight3D" parent="restaurant/dining area"]
+transform = Transform3D(0.999999, 0.00174533, -2.28872e-10, 3.05161e-10, -4.37103e-08, 1, 0.00174533, -0.999999, -4.37107e-08, -4.12528, 4.83463, -0.253445)
+light_energy = 0.608
+light_indirect_energy = 0.0
+shadow_enabled = true
+spot_range = 6.80688
+spot_angle = 49.2187
+
+[node name="backstage" type="MeshInstance3D" parent="restaurant"]
+mesh = ExtResource("5_hv8kr")
+surface_material_override/6 = SubResource("StandardMaterial3D_k658g")
+surface_material_override/7 = SubResource("StandardMaterial3D_6la4a")
+surface_material_override/9 = SubResource("StandardMaterial3D_pnki2")
+
+[node name="Cam5" type="Camera3D" parent="restaurant/backstage"]
+transform = Transform3D(-0.642787, -0.272028, 0.716118, -3.58888e-09, 0.934826, 0.355107, -0.766045, 0.228258, -0.600894, -7.38429, 3.7445, 8.02783)
+current = true
+fov = 70.4686
+
+[node name="OmniLight3D" type="OmniLight3D" parent="restaurant/backstage/Cam5"]
+transform = Transform3D(0.707107, 3.32881e-07, 0.707107, 0.251098, 0.934826, -0.251099, -0.661022, 0.355107, 0.661021, -0.127979, 1.77117, -3.05785)
+omni_range = 5.04309
+script = ExtResource("7_w8lcp")
+
+[node name="restroom" type="MeshInstance3D" parent="restaurant"]
+mesh = ExtResource("3_k81r8")
+surface_material_override/3 = SubResource("StandardMaterial3D_ymyqg")
+surface_material_override/4 = SubResource("StandardMaterial3D_e27y6")
+surface_material_override/5 = SubResource("StandardMaterial3D_orhe3")
+
+[node name="Cam7" type="Camera3D" parent="restaurant/restroom"]
+transform = Transform3D(0.422618, 0.321836, -0.84724, 0, 0.934826, 0.355107, 0.906308, -0.150075, 0.395074, -6.47088, 4.26531, -8.34269)
+current = true
+fov = 50.2531
+
+[node name="OmniLight3D" type="OmniLight3D" parent="restaurant/restroom/Cam7"]
+transform = Transform3D(0.707107, 3.32881e-07, 0.707107, 0.251098, 0.934826, -0.251099, -0.661022, 0.355107, 0.661021, -0.127979, 1.77117, -3.05785)
+omni_range = 9.69978
+script = ExtResource("7_w8lcp")
+
+[node name="piratecove" type="MeshInstance3D" parent="restaurant"]
+mesh = ExtResource("8_gyjse")
+skeleton = NodePath("../supply closet")
+surface_material_override/0 = SubResource("StandardMaterial3D_6x1do")
+
+[node name="curtain_open" type="MeshInstance3D" parent="restaurant/piratecove"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.675, 0, 0)
+visible = false
+mesh = ExtResource("9_yfo32")
+skeleton = NodePath("../supply closet")
+surface_material_override/0 = SubResource("StandardMaterial3D_b5up8")
+
+[node name="curtain_closed" type="MeshInstance3D" parent="restaurant/piratecove"]
+mesh = ExtResource("9_yfo32")
+skeleton = NodePath("../supply closet")
+surface_material_override/0 = SubResource("StandardMaterial3D_br5wg")
+
+[node name="hallway right" type="MeshInstance3D" parent="restaurant"]
+mesh = ExtResource("3_yrepm")
+skeleton = NodePath("../hallway left")
+surface_material_override/0 = SubResource("StandardMaterial3D_fwcu3")
+surface_material_override/4 = SubResource("StandardMaterial3D_6cfii")
+surface_material_override/5 = SubResource("StandardMaterial3D_ii7gi")
+
+[node name="hallwaylampright" type="OmniLight3D" parent="restaurant/hallway right"]
+transform = Transform3D(-2.87868e-08, -0.258819, 0.965926, -7.71341e-09, 0.965926, 0.258819, -1, -1.19904e-14, -2.98023e-08, 17, 3.5, -3)
+visible = false
+light_color = Color(0, 0.968627, 0.980392, 1)
+light_energy = 16.0
+light_indirect_energy = 1.335
+shadow_enabled = true
+omni_range = 8.43641
+script = ExtResource("9_0i2tj")
+
+[node name="Cam4A" type="Camera3D" parent="restaurant/hallway right"]
+transform = Transform3D(-0.0871558, -0.257834, 0.96225, 0, 0.965926, 0.258819, -0.996195, 0.0225576, -0.084186, 16.752, 4.3056, -4.27815)
+current = true
+fov = 55.7161
+
+[node name="hallwaylamp" type="SpotLight3D" parent="restaurant/hallway right/Cam4A"]
+transform = Transform3D(0.183471, 0.983025, 1.64036e-08, -0.254426, 0.0474858, 0.965926, 0.949529, -0.177219, 0.258819, -0.0115745, 2.84851, -8.19005)
+light_indirect_energy = 0.0
+light_size = 1.0
+spot_range = 5.26753
+spot_angle = 54.6668
+script = ExtResource("5_sv51e")
+
+[node name="Cam4B" type="Camera3D" parent="restaurant/hallway right"]
+transform = Transform3D(0.593684, 0.48398, -0.642886, -0.0300308, 0.811685, 0.583323, 0.804138, -0.327003, 0.496419, 19.5523, 4.72014, -2.5013)
+current = true
+fov = 63.2819
+
+[node name="spotlight" type="SpotLight3D" parent="restaurant/hallway right/Cam4B"]
+transform = Transform3D(0.999995, 0.000136055, 0.00319558, -2.43112e-05, 0.999389, -0.0349436, -0.00319837, 0.0349434, 0.999384, 0.0849695, 0.0113063, 0.0159855)
+light_energy = 9.62
+light_indirect_energy = 0.0
+light_size = 1.0
+spot_range = 7.45278
+spot_angle = 28.6739
+script = ExtResource("5_sv51e")
+
+[node name="hallway left" type="MeshInstance3D" parent="restaurant"]
+mesh = ExtResource("3_3cr12")
+surface_material_override/1 = SubResource("StandardMaterial3D_o4w1w")
+surface_material_override/2 = SubResource("StandardMaterial3D_cvxt5")
+surface_material_override/3 = SubResource("StandardMaterial3D_s0im2")
+
+[node name="hallwaylampleft" type="OmniLight3D" parent="restaurant/hallway left"]
+transform = Transform3D(-2.87868e-08, -0.258819, 0.965926, -7.71341e-09, 0.965926, 0.258819, -1, 8.88178e-16, -2.98023e-08, 17, 3.5, 4.7)
+visible = false
+light_color = Color(0, 0.968627, 0.980392, 1)
+light_energy = 16.0
+light_indirect_energy = 1.335
+shadow_enabled = true
+omni_range = 7.48392
+script = ExtResource("9_0i2tj")
+
+[node name="Cam2A" type="Camera3D" parent="restaurant/hallway left"]
+transform = Transform3D(0.137963, -0.256344, 0.956689, -1.91517e-08, 0.965926, 0.258819, -0.990437, -0.0357075, 0.133262, 16.752, 4.3056, 5.65694)
+current = true
+fov = 40.9241
+script = ExtResource("13_mv2pp")
+
+[node name="hallwaylamp" type="SpotLight3D" parent="restaurant/hallway left/Cam2A"]
+transform = Transform3D(0.183471, 0.983025, -2.64045e-08, -0.254426, 0.0474859, 0.965926, 0.949529, -0.177219, 0.258819, -0.669309, 3.34107, -10.0283)
+light_indirect_energy = 0.0
+light_size = 1.0
+spot_range = 5.26753
+spot_angle = 54.6668
+script = ExtResource("5_sv51e")
+
+[node name="flicker_timer" type="Timer" parent="restaurant/hallway left/Cam2A"]
+one_shot = true
+
+[node name="Cam2B" type="Camera3D" parent="restaurant/hallway left"]
+transform = Transform3D(-0.800646, 0.330147, -0.499968, -0.0297578, 0.811538, 0.583541, 0.598398, 0.482088, -0.639931, 19.5523, 4.72014, 3.68346)
+current = true
+fov = 63.2819
+
+[node name="spotlight" type="SpotLight3D" parent="restaurant/hallway left/Cam2B"]
+transform = Transform3D(0.999995, 0.000136055, 0.00319558, -2.43112e-05, 0.999389, -0.0349436, -0.00319837, 0.0349434, 0.999384, 0.0849695, 0.0113063, 0.0159855)
+light_energy = 9.62
+light_indirect_energy = 0.0
+light_size = 1.0
+spot_range = 7.45278
+spot_angle = 28.6739
+script = ExtResource("5_sv51e")
+
+[node name="supply closet" type="MeshInstance3D" parent="restaurant"]
+mesh = ExtResource("7_05lp8")
+surface_material_override/0 = SubResource("StandardMaterial3D_gywe7")
+surface_material_override/1 = SubResource("StandardMaterial3D_v7ffx")
+surface_material_override/2 = SubResource("StandardMaterial3D_e54hy")
+
+[node name="Cam3" type="Camera3D" parent="restaurant/supply closet"]
+transform = Transform3D(0.48786, -0.715056, 0.500688, 0, 0.573576, 0.819152, -0.872922, -0.399631, 0.279825, 10.02, 4.473, 8.382)
+environment = ExtResource("3_syiq6")
+current = true
+fov = 67.8855
+
+[node name="spotlight" type="SpotLight3D" parent="restaurant/supply closet/Cam3"]
+transform = Transform3D(0.999995, 0.000136055, 0.00319558, -2.43112e-05, 0.999389, -0.0349436, -0.00319837, 0.0349434, 0.999384, 0.0849695, 0.0113063, 0.0159855)
+light_energy = 9.62
+light_indirect_energy = 0.0
+light_size = 1.0
+spot_range = 10.4944
+spot_angle = 31.0126
+script = ExtResource("5_sv51e")
+
+[node name="office" type="MeshInstance3D" parent="restaurant"]
+mesh = ExtResource("5_ug5lx")
+surface_material_override/0 = SubResource("StandardMaterial3D_ynxh4")
+surface_material_override/1 = SubResource("StandardMaterial3D_8pnd4")
+surface_material_override/2 = SubResource("StandardMaterial3D_mkj0f")
+surface_material_override/4 = SubResource("StandardMaterial3D_worvn")
+surface_material_override/5 = SubResource("StandardMaterial3D_5mlmr")
+surface_material_override/6 = SubResource("StandardMaterial3D_du4bj")
+surface_material_override/7 = SubResource("StandardMaterial3D_5hq6q")
+surface_material_override/8 = SubResource("StandardMaterial3D_i5kon")
+surface_material_override/11 = SubResource("StandardMaterial3D_7d8ft")
+surface_material_override/16 = SubResource("StandardMaterial3D_bqchi")
+surface_material_override/20 = ExtResource("16_ewy1m")
+surface_material_override/22 = SubResource("StandardMaterial3D_fmspv")
+surface_material_override/23 = ExtResource("19_iv7co")
+surface_material_override/30 = SubResource("StandardMaterial3D_ws3gq")
+surface_material_override/31 = ExtResource("19_iv7co")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="restaurant/office"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8936, 4.35176, 0.507599)
+light_color = Color(0.819608, 0.819608, 0, 1)
+light_energy = 1.36
+light_size = 0.1
+light_specular = 1.895
+shadow_enabled = true
+omni_range = 5.64078
+
+[node name="CamSELF" type="Camera3D" parent="restaurant/office"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.3045, 2.13636, 0.726769)
+environment = ExtResource("3_syiq6")
+current = true
+fov = 70.0
+far = 21.0
+script = ExtResource("17_r1ps6")
+
+[node name="monitor" type="MeshInstance3D" parent="restaurant/office/CamSELF"]
+transform = Transform3D(3.09487e-08, -0.00104, -0.259998, 0.26, -1.1365e-08, 3.09944e-08, -1.14888e-08, -0.259998, 0.00104, 0, -0.468, -0.8)
+mesh = ExtResource("17_py6au")
+surface_material_override/1 = SubResource("StandardMaterial3D_sq31x")
+
+[node name="buttons" type="Node3D" parent="restaurant/office"]
+
+[node name="buttonleftdoor" type="StaticBody3D" parent="restaurant/office/buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.2418, 1.775, 3.06418)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="restaurant/office/buttons/buttonleftdoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0343323, -0.0098877, -0.00939941)
+shape = SubResource("BoxShape3D_lcctw")
+
+[node name="buttonleftlamp" type="StaticBody3D" parent="restaurant/office/buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.2418, 1.46543, 3.06418)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="restaurant/office/buttons/buttonleftlamp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0343323, -0.0101318, -0.00939941)
+shape = SubResource("BoxShape3D_lcctw")
+
+[node name="buttonrightdoor" type="StaticBody3D" parent="restaurant/office/buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.2418, 1.775, -1.66336)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="restaurant/office/buttons/buttonrightdoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0343323, -0.0098877, -0.00939941)
+shape = SubResource("BoxShape3D_lcctw")
+
+[node name="buttonrightlamp" type="StaticBody3D" parent="restaurant/office/buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.2418, 1.46543, -1.66336)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="restaurant/office/buttons/buttonrightlamp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0343323, -0.0101318, -0.00939941)
+shape = SubResource("BoxShape3D_lcctw")
+
+[node name="fan" type="AudioStreamPlayer3D" parent="restaurant/office"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.9125, 1.60325, 0.105514)
+stream = ExtResource("23_2pbpd")
+attenuation_model = 2
+max_db = 6.0
+autoplay = true
+max_distance = 7.3
+script = ExtResource("24_fag6w")
+
+[node name="doorleft" type="MeshInstance3D" parent="restaurant/office"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.153, 6.044, 3.32)
+mesh = SubResource("BoxMesh_qijd6")
+surface_material_override/0 = ExtResource("16_ewy1m")
+script = ExtResource("23_jep6e")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="restaurant/office/doorleft"]
+libraries = {
+"": SubResource("AnimationLibrary_dlqw0")
+}
+
+[node name="sound_door_close" type="AudioStreamPlayer3D" parent="restaurant/office/doorleft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.97293, 0)
+stream = ExtResource("26_wfo4l")
+
+[node name="doorright" type="MeshInstance3D" parent="restaurant/office"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.153, 6.044, -1.95)
+mesh = SubResource("BoxMesh_qijd6")
+surface_material_override/0 = ExtResource("16_ewy1m")
+script = ExtResource("23_jep6e")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="restaurant/office/doorright"]
+libraries = {
+"": SubResource("AnimationLibrary_dlqw0")
+}
+
+[node name="sound_door_close" type="AudioStreamPlayer3D" parent="restaurant/office/doorright"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.97293, 0)
+stream = ExtResource("26_wfo4l")
+
+[node name="ceiling" type="MeshInstance3D" parent="restaurant"]
+transform = Transform3D(-29.7763, -3.21195e-08, 0, 2.60313e-06, -0.367404, 0, 0, 0, 22.171, 0.666462, 5.22787, 0)
+material_override = ExtResource("22_bwbmy")
+mesh = SubResource("PlaneMesh_ww7vy")
+surface_material_override/0 = ExtResource("22_bwbmy")
+
+[node name="animatronics" type="Node3D" parent="restaurant"]
+
+[node name="foxy" type="Node3D" parent="restaurant/animatronics"]
+script = ExtResource("24_q03jp")
+
+[node name="foxy_incurtain" type="MeshInstance3D" parent="restaurant/animatronics/foxy"]
+transform = Transform3D(-0.495722, -0.0652631, -4.35766e-08, -0.0650619, 0.494194, 0.0392295, -0.00512044, 0.0388939, -0.498459, 0.175, 0.693, 8.731)
+mesh = ExtResource("16_6iupt")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_cpg5j")
+surface_material_override/1 = SubResource("StandardMaterial3D_4pjyl")
+surface_material_override/2 = SubResource("StandardMaterial3D_x46mm")
+surface_material_override/3 = SubResource("StandardMaterial3D_cc3am")
+surface_material_override/4 = SubResource("StandardMaterial3D_xq875")
+surface_material_override/6 = SubResource("StandardMaterial3D_nnu58")
+
+[node name="foxy_walkingaway" type="MeshInstance3D" parent="restaurant/animatronics/foxy"]
+transform = Transform3D(0.129409, 0, -0.482963, 0, 0.5, 0, 0.482963, 0, 0.12941, 0.41, 0.255, 6.496)
+visible = false
+mesh = ExtResource("26_7rah1")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_4kb5v")
+surface_material_override/1 = SubResource("StandardMaterial3D_b8rqh")
+surface_material_override/2 = SubResource("StandardMaterial3D_0kx3v")
+surface_material_override/3 = SubResource("StandardMaterial3D_x1v42")
+surface_material_override/4 = SubResource("StandardMaterial3D_628n7")
+surface_material_override/5 = SubResource("StandardMaterial3D_d2gh4")
+surface_material_override/6 = SubResource("StandardMaterial3D_vxh8p")
+
+[node name="foxy_jump" type="MeshInstance3D" parent="restaurant/animatronics/foxy"]
+transform = Transform3D(0.353379, 0, -0.353728, 0, 0.5, 0, 0.353728, 0, 0.353379, 19.544, 0.255, 4.1)
+visible = false
+mesh = ExtResource("26_7rah1")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_4kb5v")
+surface_material_override/1 = SubResource("StandardMaterial3D_b8rqh")
+surface_material_override/2 = SubResource("StandardMaterial3D_0kx3v")
+surface_material_override/3 = SubResource("StandardMaterial3D_x1v42")
+surface_material_override/4 = SubResource("StandardMaterial3D_628n7")
+surface_material_override/5 = SubResource("StandardMaterial3D_d2gh4")
+surface_material_override/6 = SubResource("StandardMaterial3D_vxh8p")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="restaurant/animatronics/foxy/foxy_jump"]
+transform = Transform3D(-2, 0, -0.000984907, 0, 2, 0, 0.000984848, 0, -2, 0.0397415, 2.94477, -4.00124)
+
+[node name="movementcooldown" type="Timer" parent="restaurant/animatronics/foxy"]
+wait_time = 3.0
+autostart = true
+
+[node name="state3timer" type="Timer" parent="restaurant/animatronics/foxy"]
+wait_time = 3.0
+one_shot = true
+
+[node name="sound_running" type="AudioStreamPlayer" parent="restaurant/animatronics/foxy"]
+stream = ExtResource("30_wt3yy")
+
+[node name="sound_jump" type="AudioStreamPlayer" parent="restaurant/animatronics/foxy"]
+stream = ExtResource("28_14rqe")
+volume_db = 24.0
+
+[node name="sound_door_banging" type="AudioStreamPlayer3D" parent="restaurant/animatronics/foxy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.1551, 2.03287, 3.32755)
+stream = ExtResource("32_8uwsh")
+volume_db = 80.0
+max_db = 6.0
+max_distance = 10.0
+panning_strength = 0.3
+
+[node name="foxy running anim" type="AnimationPlayer" parent="restaurant/animatronics/foxy"]
+libraries = {
+"": SubResource("AnimationLibrary_7j0dg")
+}
+
+[node name="foxy jumpscare anim" type="AnimationPlayer" parent="restaurant/animatronics/foxy"]
+libraries = {
+"": SubResource("AnimationLibrary_pakt3")
+}
+
+[node name="Cam6" type="Camera3D" parent="restaurant"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.98915, 3.57114, 0)
+environment = ExtResource("3_syiq6")
+script = ExtResource("15_l27qn")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+sky_mode = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="cam6text" type="RichTextLabel" parent="CanvasLayer"]
+clip_contents = false
+offset_left = 510.0
+offset_top = 377.0
+offset_right = 1456.0
+offset_bottom = 608.0
+theme_override_font_sizes/normal_font_size = 80
+text = "CAMERA 6 UNAVALABLE
+ONLY AUDIO AVAILABLE"
+
+[node name="powerdisplay" type="RichTextLabel" parent="CanvasLayer"]
+clip_contents = false
+offset_left = 24.0
+offset_top = 797.0
+offset_right = 400.0
+offset_bottom = 1085.0
+theme_override_font_sizes/normal_font_size = 60
+text = "power left: 100%
+"
+
+[node name="vhs shader" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_ox47n")
+anchors_preset = -1
+anchor_left = 0.170833
+anchor_top = -0.416667
+anchor_right = 0.170833
+anchor_bottom = -0.416667
+offset_left = -328.0
+offset_top = 450.0
+offset_right = 1592.0
+offset_bottom = 1530.0
+metadata/_edit_use_anchors_ = true
+
+[node name="movecamleft" type="StaticBody2D" parent="CanvasLayer"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/movecamleft"]
+position = Vector2(218.5, 540)
+shape = SubResource("RectangleShape2D_0fy4l")
+
+[node name="movecamright" type="StaticBody2D" parent="CanvasLayer"]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/movecamright"]
+position = Vector2(1712, 537)
+shape = SubResource("RectangleShape2D_0fy4l")
+
+[node name="map" type="TextureRect" parent="CanvasLayer"]
+offset_left = 1456.0
+offset_top = 696.0
+offset_right = 2423.0
+offset_bottom = 1487.0
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("4_w2rqc")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="map buttons" type="Node2D" parent="CanvasLayer"]
+
+[node name="cam1A" type="Button" parent="CanvasLayer/map buttons"]
+offset_left = 1610.0
+offset_top = 710.0
+offset_right = 1667.0
+offset_bottom = 744.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s2gj7")
+theme_override_styles/focus = ExtResource("17_ppxyb")
+script = ExtResource("17_mja26")
+
+[node name="cam1B" type="Button" parent="CanvasLayer/map buttons"]
+offset_left = 1589.0
+offset_top = 769.0
+offset_right = 1644.0
+offset_bottom = 803.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_upj0j")
+theme_override_styles/focus = ExtResource("17_ppxyb")
+script = ExtResource("17_mja26")
+
+[node name="cam1C" type="Button" parent="CanvasLayer/map buttons"]
+offset_left = 1556.0
+offset_top = 852.0
+offset_right = 1611.0
+offset_bottom = 885.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xaiev")
+theme_override_styles/focus = ExtResource("17_ppxyb")
+script = ExtResource("17_mja26")
+
+[node name="cam2A" type="Button" parent="CanvasLayer/map buttons"]
+offset_left = 1609.0
+offset_top = 973.0
+offset_right = 1666.0
+offset_bottom = 1009.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1hm1q")
+theme_override_styles/focus = ExtResource("17_ppxyb")
+script = ExtResource("17_mja26")
+
+[node name="cam2B" type="Button" parent="CanvasLayer/map buttons"]
+offset_left = 1610.0
+offset_top = 1016.0
+offset_right = 1666.0
+offset_bottom = 1051.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2r1wv")
+theme_override_styles/focus = ExtResource("17_ppxyb")
+script = ExtResource("17_mja26")
+
+[node name="cam3" type="Button" parent="CanvasLayer/map buttons"]
+offset_left = 1522.0
+offset_top = 956.0
+offset_right = 1577.0
+offset_bottom = 988.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ymllu")
+theme_override_styles/focus = ExtResource("17_ppxyb")
+script = ExtResource("17_mja26")
+
+[node name="cam4A" type="Button" parent="CanvasLayer/map buttons"]
+offset_left = 1721.0
+offset_top = 974.0
+offset_right = 1779.0
+offset_bottom = 1010.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pmr7q")
+theme_override_styles/focus = ExtResource("17_ppxyb")
+script = ExtResource("17_mja26")
+
+[node name="cam4B" type="Button" parent="CanvasLayer/map buttons"]
+offset_left = 1721.0
+offset_top = 1015.0
+offset_right = 1779.0
+offset_bottom = 1052.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0pa5t")
+theme_override_styles/focus = ExtResource("17_ppxyb")
+script = ExtResource("17_mja26")
+
+[node name="cam5" type="Button" parent="CanvasLayer/map buttons"]
+offset_left = 1478.0
+offset_top = 797.0
+offset_right = 1533.0
+offset_bottom = 831.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_elpe7")
+theme_override_styles/focus = ExtResource("17_ppxyb")
+script = ExtResource("17_mja26")
+
+[node name="cam6" type="Button" parent="CanvasLayer/map buttons"]
+offset_left = 1824.0
+offset_top = 937.0
+offset_right = 1881.0
+offset_bottom = 971.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5lrdw")
+theme_override_styles/focus = ExtResource("17_ppxyb")
+script = ExtResource("17_mja26")
+
+[node name="cam7" type="Button" parent="CanvasLayer/map buttons"]
+offset_left = 1834.0
+offset_top = 798.0
+offset_right = 1890.0
+offset_bottom = 833.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vwbgg")
+theme_override_styles/focus = ExtResource("17_ppxyb")
+script = ExtResource("17_mja26")
+
+[node name="monitor toggle" type="TextureButton" parent="CanvasLayer"]
+offset_left = 443.0
+offset_top = 885.0
+offset_right = 1467.0
+offset_bottom = 1141.0
+texture_normal = ExtResource("21_x158s")
+stretch_mode = 5
+
+[node name="debugtext" type="Node2D" parent="CanvasLayer"]
+
+[node name="foxy" type="RichTextLabel" parent="CanvasLayer/debugtext"]
+offset_left = 1267.0
+offset_right = 1920.0
+offset_bottom = 377.0
+theme_override_font_sizes/normal_font_size = 30
+text = "DEBUG FOXY
+movement chance: 0.0000>13.7452
+state: 0"
+
+[node name="increasestate" type="Button" parent="CanvasLayer/debugtext"]
+offset_left = 1376.0
+offset_top = 88.0
+offset_right = 1408.0
+offset_bottom = 128.0
+theme_override_font_sizes/font_size = 21
+text = "+1"
+
+[node name="monitor control" type="Node" parent="."]
+script = ExtResource("26_8e0sh")
+
+[node name="countdown monitor" type="Timer" parent="monitor control"]
+
+[node name="monitoranim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_puqqh")
+}
+script = ExtResource("27_hw3dn")
+
+[connection signal="timeout" from="restaurant/hallway left/Cam2A/flicker_timer" to="restaurant/hallway left/Cam2A" method="_on_flicker_timer_timeout"]
+[connection signal="mouse_entered" from="restaurant/office/buttons/buttonleftdoor" to="restaurant/office/doorleft" method="_on_buttonleftdoor_mouse_entered"]
+[connection signal="mouse_exited" from="restaurant/office/buttons/buttonleftdoor" to="restaurant/office/doorleft" method="_on_buttonleftdoor_mouse_exited"]
+[connection signal="mouse_entered" from="restaurant/office/buttons/buttonleftlamp" to="restaurant/hallway left/hallwaylampleft" method="_on_buttonleftlamp_mouse_entered"]
+[connection signal="mouse_exited" from="restaurant/office/buttons/buttonleftlamp" to="restaurant/hallway left/hallwaylampleft" method="_on_buttonleftlamp_mouse_exited"]
+[connection signal="mouse_entered" from="restaurant/office/buttons/buttonrightdoor" to="restaurant/office/doorright" method="_on_buttonrightdoor_mouse_entered"]
+[connection signal="mouse_exited" from="restaurant/office/buttons/buttonrightdoor" to="restaurant/office/doorright" method="_on_buttonrightdoor_mouse_exited"]
+[connection signal="mouse_entered" from="restaurant/office/buttons/buttonrightlamp" to="restaurant/hallway right/hallwaylampright" method="_on_buttonrightlamp_mouse_entered"]
+[connection signal="mouse_exited" from="restaurant/office/buttons/buttonrightlamp" to="restaurant/hallway right/hallwaylampright" method="_on_buttonrightlamp_mouse_exited"]
+[connection signal="door_closed" from="restaurant/office/doorleft" to="restaurant/animatronics/foxy" method="_on_doorleft_door_closed"]
+[connection signal="door_opened" from="restaurant/office/doorleft" to="restaurant/animatronics/foxy" method="_on_doorleft_door_opened"]
+[connection signal="monitordown" from="restaurant/animatronics/foxy" to="monitor control" method="_force_monitor_down"]
+[connection signal="timeout" from="restaurant/animatronics/foxy/movementcooldown" to="restaurant/animatronics/foxy" method="_on_movementcooldown_timeout"]
+[connection signal="timeout" from="restaurant/animatronics/foxy/state3timer" to="restaurant/animatronics/foxy" method="_on_state_3_timer_timeout"]
+[connection signal="finished" from="restaurant/animatronics/foxy/sound_jump" to="restaurant/animatronics/foxy" method="_on_sound_jump_finished"]
+[connection signal="mouse_entered" from="CanvasLayer/movecamleft" to="restaurant/office/CamSELF" method="_on_movecamleft_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/movecamleft" to="restaurant/office/CamSELF" method="_on_movecamleft_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/movecamright" to="restaurant/office/CamSELF" method="_on_movecamright_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/movecamright" to="restaurant/office/CamSELF" method="_on_movecamright_mouse_exited"]
+[connection signal="button_down" from="CanvasLayer/monitor toggle" to="monitor control" method="_on_monitor_toggle_button_down"]
+[connection signal="button_up" from="CanvasLayer/monitor toggle" to="monitor control" method="_on_monitor_toggle_button_up"]
+[connection signal="pressed" from="CanvasLayer/debugtext/increasestate" to="restaurant/animatronics/foxy" method="_on_button_increasestate_pressed"]
+[connection signal="close_monitor" from="monitor control" to="monitoranim" method="_on_close_monitor"]
+[connection signal="open_monitor" from="monitor control" to="monitoranim" method="_on_open_monitor"]
+[connection signal="timeout" from="monitor control/countdown monitor" to="monitor control" method="_on_countdown_monitor"]

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://on76pbkvqbad"
+path="res://.godot/imported/hallwayleft.obj-21dfa7954afedab49c56776b497abe84.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hallwayleft.obj-21dfa7954afedab49c56776b497abe84.mesh"]
+
+source_file="res://models/restaurant/hallwayleft.obj"
+dest_files=["res://.godot/imported/hallwayleft.obj-21dfa7954afedab49c56776b497abe84.mesh", "res://.godot/imported/hallwayleft.obj-21dfa7954afedab49c56776b497abe84.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
